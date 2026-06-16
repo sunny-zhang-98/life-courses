@@ -273,6 +273,28 @@ button {
   margin-bottom: 28px;
 }
 
+/* Two-column grid inside main area */
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.detail-grid .detail-section {
+  margin-bottom: 0;
+}
+
+.detail-grid .detail-list li {
+  padding: 10px 14px;
+  font-size: 0.85rem;
+}
+
+/* Full-width items in the grid */
+.detail-grid .detail-section:has(.knowledge-core),
+.detail-grid .detail-section:has(.resource-list) {
+  grid-column: 1 / -1;
+}
+
 /* Sidebar */
 .detail-sidebar {
   width: 220px;
@@ -430,8 +452,7 @@ button {
    ============================================ */
 
 .knowledge-detail {
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 100%;
 }
 
 .detail-header {

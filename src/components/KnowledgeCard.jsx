@@ -38,6 +38,7 @@ export default function KnowledgeCard({ knowledge, learnedIds, onMarkLearned, on
       <div className="detail-layout">
         {/* ========== Main Content ========== */}
         <div className="detail-main">
+          <div className="detail-grid">
 
           {/* 错误案例 */}
           {knowledge.commonMistakes?.length > 0 && (
@@ -120,6 +121,7 @@ export default function KnowledgeCard({ knowledge, learnedIds, onMarkLearned, on
               </ul>
             </div>
           )}
+          </div>{/* end detail-grid */}
         </div>
 
         {/* ========== Sidebar ========== */}
