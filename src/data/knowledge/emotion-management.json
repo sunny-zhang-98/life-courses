@@ -53,9 +53,7 @@
     "meditation",
     "sleep-health"
   ],
-  "children": [
-    "meditation"
-  ],
+  "children": [],
   "next": [
     "meditation"
   ]

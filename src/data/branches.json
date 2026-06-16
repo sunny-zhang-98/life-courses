@@ -110,5 +110,101 @@
     "icon": "📊",
     "parentId": "social",
     "order": 1
+  },
+  {
+    "id": "wellness",
+    "name": "健康身心",
+    "description": "身体与心理健康的综合养护",
+    "icon": "💪",
+    "parentId": null,
+    "order": 7
+  },
+  {
+    "id": "mental-health",
+    "name": "心理健康",
+    "description": "情绪管理、心理韧性、自我认知",
+    "icon": "🧘",
+    "parentId": "wellness",
+    "order": 1
+  },
+  {
+    "id": "relationships",
+    "name": "人际关系",
+    "description": "与他人相处的能力与智慧",
+    "icon": "🤝",
+    "parentId": null,
+    "order": 8
+  },
+  {
+    "id": "interpersonal",
+    "name": "人际交往",
+    "description": "日常社交、边界感、沟通技巧",
+    "icon": "🗣️",
+    "parentId": "relationships",
+    "order": 1
+  },
+  {
+    "id": "intimate",
+    "name": "亲密关系",
+    "description": "恋爱、婚姻与深度情感连接",
+    "icon": "💑",
+    "parentId": "relationships",
+    "order": 2
+  },
+  {
+    "id": "family",
+    "name": "家庭关系",
+    "description": "育儿、赡养老人、家庭沟通",
+    "icon": "👨‍👩‍👧‍👦",
+    "parentId": "relationships",
+    "order": 3
+  },
+  {
+    "id": "wealth-law",
+    "name": "财富与法律",
+    "description": "投资、保险、税务与法律常识",
+    "icon": "⚖️",
+    "parentId": null,
+    "order": 9
+  },
+  {
+    "id": "investing",
+    "name": "投资",
+    "description": "资产配置、风险管理、长期增值",
+    "icon": "📈",
+    "parentId": "wealth-law",
+    "order": 1
+  },
+  {
+    "id": "legal",
+    "name": "法律基础",
+    "description": "公民权利、合同、劳动法、房产",
+    "icon": "🔨",
+    "parentId": "wealth-law",
+    "order": 2
+  },
+  {
+    "id": "life-purpose",
+    "name": "人生与意义",
+    "description": "人生规划、价值观、生命教育",
+    "icon": "🏛️",
+    "parentId": null,
+    "order": 10
+  },
+  {
+    "id": "life-planning",
+    "name": "人生规划",
+    "description": "目标设定、人生设计、重大决策",
+    "icon": "🎯",
+    "parentId": "life-purpose",
+    "order": 1
+  },
+  {
+    "id": "life-education",
+    "name": "生命教育",
+    "description": "死亡教育、临终关怀、人生意义",
+    "icon": "🎋",
+    "parentId": "life-purpose",
+    "order": 2
   }
 ]

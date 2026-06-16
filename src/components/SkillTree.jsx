@@ -3,7 +3,8 @@ import { useRef, useEffect } from 'react'
 const COLORS = {
   available: { bg: 'rgba(108, 92, 231, 0.2)', border: '#6c5ce7', text: '#a29bfe' },
   learned:   { bg: 'rgba(0, 184, 148, 0.2)', border: '#00b894', text: '#55efc4' },
-  locked:    { bg: 'rgba(45, 45, 60, 0.5)', border: '#3d3d4a', text: '#6b6b82' }
+  folder:    { bg: 'rgba(253, 203, 110, 0.18)', border: '#fdcb6e', text: '#fdcb6e' },
+  folderLearned: { bg: 'rgba(0, 184, 148, 0.25)', border: '#00b894', text: '#55efc4' }
 }
 
 export default function SkillTree({ nodes, edges, onNodeClick, learnedIds }) {
@@ -69,7 +70,12 @@ export default function SkillTree({ nodes, edges, onNodeClick, learnedIds }) {
     // nodes
     for (const n of nodes) {
       const learned = learnedIds.includes(n.id)
-      const c = learned ? COLORS.learned : COLORS.available
+      let c
+      if (n.hasChildren) {
+        c = learned ? COLORS.folderLearned : COLORS.folder
+      } else {
+        c = learned ? COLORS.learned : COLORS.available
+      }
 
       ctx.beginPath()
       ctx.roundRect(n.x, n.y, n.width, n.height, 8)
@@ -79,6 +85,7 @@ export default function SkillTree({ nodes, edges, onNodeClick, learnedIds }) {
       ctx.lineWidth = learned ? 2 : 1.5
       ctx.stroke()
 
+      // Title
       ctx.fillStyle = c.text
       ctx.font = '13px -apple-system, "PingFang SC", sans-serif'
       ctx.textAlign = 'center'
@@ -165,7 +172,7 @@ export default function SkillTree({ nodes, edges, onNodeClick, learnedIds }) {
         for (let i = nodes.length - 1; i >= 0; i--) {
           const n = nodes[i]
           if (mx >= n.x && mx <= n.x + n.width && my >= n.y && my <= n.y + n.height) {
-            onNodeClick?.(n.id)
+            onNodeClick?.(n.id, e)
             break
           }
         }

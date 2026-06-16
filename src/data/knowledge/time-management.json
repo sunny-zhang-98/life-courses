@@ -50,9 +50,7 @@
     "deliberate-practice",
     "reading"
   ],
-  "children": [
-    "deliberate-practice"
-  ],
+  "children": [],
   "next": [
     "deliberate-practice"
   ]

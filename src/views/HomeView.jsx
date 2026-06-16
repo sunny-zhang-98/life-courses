@@ -55,8 +55,17 @@ export default function HomeView() {
     learned: learnedIds.includes(k.id)
   })))
 
-  const handleNodeClick = useCallback((id) => {
-    // Always open detail panel first
+  const handleNodeClick = useCallback((id, e) => {
+    if (e?.ctrlKey || e?.metaKey) {
+      // Ctrl+Click — enter folder if it has children
+      const entry = knowledgeMap[id]
+      if (entry && (entry.children || []).length > 0) {
+        setCurrentId(id)
+        setSelectedId(null)
+        return
+      }
+    }
+    // Normal click — open detail panel
     setSelectedId(id)
   }, [])
 
@@ -78,7 +87,7 @@ export default function HomeView() {
 
   const selectedKnowledge = selectedId ? knowledgeMap[selectedId] : null
 
-  // Enter key → enter folder when detail panel is open
+  // Enter → enter folder, Esc → close detail / go up
   useEffect(() => {
     const handler = (e) => {
       if (e.key === 'Enter' && selectedId) {
@@ -89,10 +98,18 @@ export default function HomeView() {
           setSelectedId(null)
         }
       }
+      if (e.key === 'Escape') {
+        if (selectedId) {
+          setSelectedId(null)
+        } else if (currentId) {
+          const parent = getParent(currentId)
+          setCurrentId(parent ? parent.id : null)
+        }
+      }
     }
     window.addEventListener('keydown', handler)
     return () => window.removeEventListener('keydown', handler)
-  }, [selectedId])
+  }, [selectedId, currentId])
 
   const rootCount = getRootNodes().length
   const allCount = knowledgeList.length

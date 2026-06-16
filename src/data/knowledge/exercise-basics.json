@@ -53,11 +53,7 @@
     "sleep-health",
     "deliberate-practice"
   ],
-  "children": [
-    "xunxujianjin",
-    "running",
-    "meditation"
-  ],
+  "children": [],
   "next": [
     "xunxujianjin"
   ]
