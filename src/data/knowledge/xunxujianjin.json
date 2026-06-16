@@ -1,0 +1,58 @@
+{
+  "id": "xunxujianjin",
+  "title": "循序渐进原则",
+  "summary": "理解学习和成长的渐进规律，不急于求成",
+  "branchIds": [
+    "general"
+  ],
+  "resources": [
+    {
+      "type": "book",
+      "title": "刻意练习",
+      "author": "Anders Ericsson",
+      "url": "https://book.douban.com/subject/26895993/"
+    },
+    {
+      "type": "article",
+      "title": "最近发展区理论",
+      "platform": "知乎",
+      "url": "https://zhihu.com"
+    },
+    {
+      "type": "video",
+      "title": "如何科学地制定学习计划",
+      "platform": "B站",
+      "url": "https://www.bilibili.com"
+    }
+  ],
+  "commonMistakes": [
+    "想一口吃成胖子，一开始就挑战高难度",
+    "看不到短期进步就放弃",
+    "忽略基础，直接跳到最后一步",
+    "用别人的节奏要求自己"
+  ],
+  "journey": [
+    "学编程时一上来就想做大型项目，结果被打击得体无完肤",
+    "后来从每天写 10 行代码开始，三个月后居然能做小工具了",
+    "明白了任何技能都是台阶式的，先踩稳再往上走"
+  ],
+  "knowledge": {
+    "core": "循序渐进 = 把大目标拆成台阶，每一步比上一步难一点，但不超过你的能力上限的 10%。核心概念：最近发展区（ZPD）——最佳学习区在『已掌握』和『够不着』之间。维果茨基说：好的教学是走在发展前面的。",
+    "details": "四个关键：1) 拆解——把大目标分解成最小可执行的步骤 2) 阶梯——每一步都比上一步难 5-10% 3) 节奏——学会需要时间，大脑需要睡眠来巩固 4) 反馈——每完成一个小台阶就给自己一个反馈。记住：慢就是快。"
+  },
+  "selfTest": [
+    "你当前的目标拆解成最小步骤了吗？",
+    "你给自己的进步设定了多长的时间预期？",
+    "当看不到明显进步时，你怎么办？",
+    "你有没有跳过基础直接挑战高阶的经历？"
+  ],
+  "related": [
+    "exercise-basics",
+    "deliberate-practice",
+    "time-management"
+  ],
+  "children": [],
+  "next": [
+    "running"
+  ]
+}

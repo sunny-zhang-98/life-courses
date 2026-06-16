@@ -1,0 +1,56 @@
+[
+  {
+    "id": "childhood",
+    "name": "童年",
+    "ageRange": "0-12 岁",
+    "description": "基础认知和习惯养成的关键时期",
+    "icon": "🌱",
+    "order": 1,
+    "color": "#4CAF50"
+  },
+  {
+    "id": "teenager",
+    "name": "青少年",
+    "ageRange": "13-18 岁",
+    "description": "建立学习方法、形成世界观",
+    "icon": "🌿",
+    "order": 2,
+    "color": "#8BC34A"
+  },
+  {
+    "id": "young-adult",
+    "name": "青年",
+    "ageRange": "19-25 岁",
+    "description": "专业技能积累、独立决策",
+    "icon": "🌳",
+    "order": 3,
+    "color": "#2196F3"
+  },
+  {
+    "id": "adult",
+    "name": "成年",
+    "ageRange": "26-40 岁",
+    "description": "事业发展、家庭经营、持续成长",
+    "icon": "🏗️",
+    "order": 4,
+    "color": "#FF9800"
+  },
+  {
+    "id": "middle-age",
+    "name": "中年",
+    "ageRange": "40-60 岁",
+    "description": "经验沉淀、传承指导",
+    "icon": "🏛️",
+    "order": 5,
+    "color": "#9C27B0"
+  },
+  {
+    "id": "elderly",
+    "name": "老年",
+    "ageRange": "60+ 岁",
+    "description": "人生智慧总结、身心健康",
+    "icon": "🎋",
+    "order": 6,
+    "color": "#E91E63"
+  }
+]

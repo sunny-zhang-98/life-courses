@@ -1,0 +1,58 @@
+{
+  "id": "communication",
+  "title": "沟通与表达",
+  "summary": "清晰表达自己的想法，有效理解他人的意图",
+  "branchIds": [
+    "general"
+  ],
+  "resources": [
+    {
+      "type": "book",
+      "title": "非暴力沟通",
+      "author": "Marshall Rosenberg",
+      "url": "https://book.douban.com/subject/3533221/"
+    },
+    {
+      "type": "book",
+      "title": "金字塔原理",
+      "author": "Barbara Minto",
+      "url": "https://book.douban.com/subject/1020644/"
+    },
+    {
+      "type": "video",
+      "title": "如何成为沟通高手",
+      "platform": "B站",
+      "url": "https://www.bilibili.com"
+    }
+  ],
+  "commonMistakes": [
+    "以为自己说清楚了，其实对方完全没听懂",
+    "沟通 = 说服对方接受我的观点",
+    "只关注自己要说什么，不关心对方在听什么",
+    "用情绪代替事实"
+  ],
+  "journey": [
+    "以前说话总是绕圈子，怕得罪人",
+    "学了金字塔原理后，先结论后论据，沟通效率大幅提升",
+    "非暴力沟通的四步法改变了我和家人的相处方式"
+  ],
+  "knowledge": {
+    "core": "高效沟通 = 清晰的结构 + 同理心 + 倾听。金字塔原理：结论先行，以上统下。非暴力沟通四步：观察（事实）→ 感受（情绪）→ 需要（需求）→ 请求（行动）。",
+    "details": "沟通中最重要的一步是倾听。主动倾听：听完后用自己的话复述一遍，确认理解无误。表达时遵循『观点→理由→例子』的三段结构。遇到分歧时，先找共同点，再讨论差异。"
+  },
+  "selfTest": [
+    "你能用一句话说清楚你的核心观点吗？",
+    "你能否复述对方刚才说的核心内容？",
+    "你和人有分歧时，是先理解对方还是先反驳？",
+    "你的表达有『观点→理由→例子』的结构吗？"
+  ],
+  "related": [
+    "first-job",
+    "emotion-management",
+    "writing-basics"
+  ],
+  "children": [],
+  "next": [
+    "first-job"
+  ]
+}

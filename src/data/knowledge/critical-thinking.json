@@ -1,0 +1,60 @@
+{
+  "id": "critical-thinking",
+  "title": "批判性思维",
+  "summary": "学会辨别信息真伪，做出理性判断",
+  "branchIds": [
+    "thinking",
+    "scientific-thinking"
+  ],
+  "resources": [
+    {
+      "type": "book",
+      "title": "学会提问",
+      "author": "Neil Browne",
+      "url": "https://book.douban.com/subject/20428922/"
+    },
+    {
+      "type": "book",
+      "title": "思考，快与慢",
+      "author": "Daniel Kahneman",
+      "url": "https://book.douban.com/subject/10785583/"
+    },
+    {
+      "type": "video",
+      "title": "批判性思维入门",
+      "platform": "Coursera",
+      "url": "https://coursera.org"
+    }
+  ],
+  "commonMistakes": [
+    "批判 = 否定一切",
+    "只找支持自己观点的证据",
+    "把相关关系当作因果关系",
+    "用个例推翻统计结论"
+  ],
+  "journey": [
+    "以前看到信息就信，吃了很多亏",
+    "学了逻辑谬误后，发现到处是漏洞",
+    "现在看到新闻会先问：证据在哪？来源是谁？"
+  ],
+  "knowledge": {
+    "core": "批判性思维 = 问对问题。核心工具：1）结论是什么？2）理由是什么？3）假设是什么？4）证据可靠吗？5）有无逻辑谬误？",
+    "details": "常见的逻辑谬误包括：稻草人谬误、滑坡谬误、诉诸权威、非黑即白、幸存者偏差等。遇到一个论点时，先暂停几秒，用上述五个问题快速过一遍。"
+  },
+  "selfTest": [
+    "你能识别出日常对话中的逻辑谬误吗？",
+    "看到一个争议性新闻，你能列出双方论据吗？",
+    "你能否在没有足够证据时说 '我不知道'？"
+  ],
+  "related": [
+    "note-taking",
+    "first-principles",
+    "economy-thinking"
+  ],
+  "children": [
+    "first-principles"
+  ],
+  "next": [
+    "first-principles"
+  ]
+}

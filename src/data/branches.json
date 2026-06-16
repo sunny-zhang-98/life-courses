@@ -1,0 +1,114 @@
+[
+  {
+    "id": "general",
+    "name": "通识基础",
+    "description": "每个人都必须掌握的基础能力",
+    "icon": "📚",
+    "parentId": null,
+    "order": 1
+  },
+  {
+    "id": "thinking",
+    "name": "思维方法",
+    "description": "如何思考、分析和判断",
+    "icon": "🧠",
+    "parentId": "general",
+    "order": 2
+  },
+  {
+    "id": "academic",
+    "name": "学业与学术",
+    "description": "学习能力和学术素养",
+    "icon": "🎓",
+    "parentId": null,
+    "order": 3
+  },
+  {
+    "id": "study-method",
+    "name": "学习方法",
+    "description": "如何高效学习",
+    "icon": "✏️",
+    "parentId": "academic",
+    "order": 1
+  },
+  {
+    "id": "scientific-thinking",
+    "name": "科学思维",
+    "description": "科学方法和批判性思维",
+    "icon": "🔬",
+    "parentId": "academic",
+    "order": 2
+  },
+  {
+    "id": "career",
+    "name": "职业技能",
+    "description": "专业技能和职业发展",
+    "icon": "💼",
+    "parentId": null,
+    "order": 4
+  },
+  {
+    "id": "programmer",
+    "name": "编程",
+    "description": "从零开始的编程之路",
+    "icon": "💻",
+    "parentId": "career",
+    "order": 1
+  },
+  {
+    "id": "frontend",
+    "name": "前端开发",
+    "description": "浏览器端开发",
+    "icon": "🎨",
+    "parentId": "programmer",
+    "order": 1
+  },
+  {
+    "id": "backend",
+    "name": "后端开发",
+    "description": "服务端开发",
+    "icon": "⚙️",
+    "parentId": "programmer",
+    "order": 2
+  },
+  {
+    "id": "life",
+    "name": "生活技能",
+    "description": "日常生活中的必备能力",
+    "icon": "🏠",
+    "parentId": null,
+    "order": 5
+  },
+  {
+    "id": "finance",
+    "name": "理财",
+    "description": "个人财务管理",
+    "icon": "💰",
+    "parentId": "life",
+    "order": 1
+  },
+  {
+    "id": "health",
+    "name": "健康管理",
+    "description": "身体和心理健康",
+    "icon": "❤️",
+    "parentId": "life",
+    "order": 2
+  },
+  {
+    "id": "social",
+    "name": "社会与人文",
+    "description": "理解社会运作和人类文明",
+    "icon": "🌍",
+    "parentId": null,
+    "order": 6
+  },
+  {
+    "id": "economy",
+    "name": "经济学思维",
+    "description": "理解经济运行的基本逻辑",
+    "icon": "📊",
+    "parentId": "social",
+    "order": 1
+  }
+]

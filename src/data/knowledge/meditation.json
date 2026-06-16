@@ -1,0 +1,57 @@
+{
+  "id": "meditation",
+  "title": "冥想与正念",
+  "summary": "通过冥想训练专注力，减轻焦虑",
+  "branchIds": [
+    "life",
+    "health"
+  ],
+  "resources": [
+    {
+      "type": "book",
+      "title": "正念：此刻是一枝花",
+      "author": "Jon Kabat-Zinn",
+      "url": "https://book.douban.com/subject/26575152/"
+    },
+    {
+      "type": "book",
+      "title": "冥想",
+      "author": "Swami Rama",
+      "url": "https://book.douban.com/subject/1850799/"
+    },
+    {
+      "type": "video",
+      "title": "10 分钟正念冥想引导",
+      "platform": "B站",
+      "url": "https://www.bilibili.com"
+    }
+  ],
+  "commonMistakes": [
+    "冥想 = 什么都不想，但根本做不到",
+    "坐几分钟就腿麻腰酸，觉得自己不适合",
+    "追求『入定』的特殊体验",
+    "三天打鱼两天晒网，然后说冥想没用"
+  ],
+  "journey": [
+    "第一次冥想脑子乱得像菜市场，觉得自己『失败』了",
+    "后来发现『意识到走神然后拉回来』本身就是冥想",
+    "坚持每天 10 分钟三个月后，情绪稳定性明显提升"
+  ],
+  "knowledge": {
+    "core": "冥想 = 专注力的训练。入门最简单的方法：1) 找个安静的地方坐下 2) 设定 5-10 分钟计时器 3) 闭上眼睛，注意力放在呼吸上 4) 走神了？没关系，温柔地把注意力拉回来。核心不是『不走神』，而是『觉察到走神』。每天 10 分钟，坚持比时长重要。",
+    "details": "四步入门：1) 呼吸冥想（数呼吸，1 到 10 循环） 2) 身体扫描（从头顶到脚趾，逐部位感受） 3) 行走冥想（走路时专注脚底的感觉） 4) 正念日常（吃饭时只吃饭，不刷手机）。建议用 Headspace 或潮汐 App 引导入门。"
+  },
+  "selfTest": [
+    "你能连续 5 分钟把注意力放在呼吸上不跑神？",
+    "你每天有 10 分钟完全不看手机的时间吗？",
+    "你能否在焦虑时通过深呼吸让自己平静下来？",
+    "你能觉察到自己的情绪而不被它带走吗？"
+  ],
+  "related": [
+    "emotion-management",
+    "exercise-basics",
+    "running",
+    "sleep-health"
+  ],
+  "children": []
+}

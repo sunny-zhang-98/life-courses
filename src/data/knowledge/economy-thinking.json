@@ -1,0 +1,61 @@
+{
+  "id": "economy-thinking",
+  "title": "经济学思维方式",
+  "summary": "理解世界运行的底层逻辑——稀缺、选择与激励",
+  "branchIds": [
+    "social",
+    "economy"
+  ],
+  "resources": [
+    {
+      "type": "book",
+      "title": "经济学原理：微观经济学",
+      "author": "N. Gregory Mankiw",
+      "url": "https://book.douban.com/subject/25726097/"
+    },
+    {
+      "type": "book",
+      "title": "薛兆丰经济学讲义",
+      "author": "薛兆丰",
+      "url": "https://book.douban.com/subject/30475754/"
+    },
+    {
+      "type": "video",
+      "title": "经济学思维 50 讲",
+      "platform": "B站",
+      "url": "https://www.bilibili.com"
+    }
+  ],
+  "commonMistakes": [
+    "经济学 = 教你怎么赚钱",
+    "只看短期收益，忽略长期代价",
+    "把『相关性』当作『因果性』",
+    "忽视激励的作用——人会对激励做出反应"
+  ],
+  "journey": [
+    "以前觉得经济学就是股票和钱",
+    "学了 Mankiw 的十大原理后，发现经济学是理解人类行为的工具",
+    "现在看新闻时会问：这个政策改变了什么激励？"
+  ],
+  "knowledge": {
+    "core": "经济学的核心是四个问题：1) 稀缺（资源有限，欲望无限） 2) 选择（有选择就有成本→机会成本） 3) 激励（人们会对激励做出反应） 4) 边际（做决策看边际量，不是总量）。十大原理中最关键的一句：人们面临权衡取舍。",
+    "details": "机会成本：做一件事的成本是你放弃的其他事情中价值最高的那个。边际思维：『要不要再学一小时』不是看总收益，而是看『多学这一小时的收益是否大于休息的价值』。沉没成本：已经花出去的成本不该影响未来的决策——『来都来了』是最大的认知陷阱。"
+  },
+  "selfTest": [
+    "你做的上一个重大决定，你计算过机会成本吗？",
+    "你能识别出一个政策改变了什么激励吗？",
+    "你能否区分『沉没成本』和『未来成本』？",
+    "你买东西时考虑的是『平均价格』还是『边际效用』？"
+  ],
+  "related": [
+    "first-principles",
+    "finance-basics",
+    "critical-thinking"
+  ],
+  "children": [
+    "critical-thinking"
+  ],
+  "next": [
+    "critical-thinking"
+  ]
+}
