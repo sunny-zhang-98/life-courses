@@ -133,8 +133,9 @@ export default function SkillTree({ nodes, edges, onNodeClick, learnedIds }) {
       ctx.strokeStyle = 'rgba(253, 203, 110, 0.08)'
       ctx.lineWidth = 3
       ctx.moveTo(fx, fy)
-      const cpY = (ty - fy) * 0.3
-      ctx.bezierCurveTo(fx, fy + cpY, tx, ty - cpY, tx, ty)
+      // 水平控制点：端点处切线 = (cpX, 0)，垂直于节点竖直面 → 自然水平进出
+      const cpX = Math.max(40, (tx - fx) * 0.4)
+      ctx.bezierCurveTo(fx + cpX, fy, tx - cpX, ty, tx, ty)
       ctx.stroke()
 
       // flowing dashes (animated)
@@ -144,12 +145,12 @@ export default function SkillTree({ nodes, edges, onNodeClick, learnedIds }) {
       ctx.strokeStyle = 'rgba(253, 203, 110, 0.65)'
       ctx.lineWidth = 1.8
       ctx.moveTo(fx, fy)
-      ctx.bezierCurveTo(fx, fy + cpY, tx, ty - cpY, tx, ty)
+      ctx.bezierCurveTo(fx + cpX, fy, tx - cpX, ty, tx, ty)
       ctx.stroke()
       ctx.setLineDash([])
 
-      // arrowhead
-      const angle = Math.atan2(ty - fy, tx - fx)
+      // arrowhead — follows curve tangent at endpoint (horizontal)
+      const angle = 0
       const aLen = 8
       ctx.beginPath()
       ctx.moveTo(tx, ty)

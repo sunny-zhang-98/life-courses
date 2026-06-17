@@ -10,8 +10,23 @@ knowledgeList.forEach(k => { knowledgeMap[k.id] = k })
 
 // ─── Relations (directional links extracted from knowledge items) ───
 
-const relationContext = import.meta.glob('./relations/*.json', { eager: true, import: 'default' })
-const relationList = Object.values(relationContext)
+import yaml from 'js-yaml'
+
+const relationFiles = import.meta.glob('./relations/*.yaml', { eager: true, query: '?raw', import: 'default' })
+
+// 解析 YAML 文件，将 "a > b" 字符串转为 {from, to} 对象
+const relationList = Object.entries(relationFiles).map(([path, text]) => {
+  const rel = yaml.load(text)
+  rel.id = path.split('/').pop().replace('.yaml', '')
+  rel.links = (rel.links || []).map(link => {
+    if (typeof link === 'string') {
+      const parts = link.split(/\s*>\s*/)
+      return { from: parts[0], to: parts[1] || '' }
+    }
+    return link
+  })
+  return rel
+})
 
 // Build lookup maps for each relation: fromMap (from → [to]) and toMap (to → [from])
 function buildRelationMaps(rel) {
