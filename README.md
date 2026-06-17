@@ -1,16 +1,67 @@
-# React + Vite
+# 🎓 人生必修课 · Essential Life Courses
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> 为成长路上的人索引必须要学的知识，按优先级排列最关键的知识。
+> An index of essential knowledge for life — prioritized by impact.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 关于这个项目 / About
 
-## React Compiler
+人生必修课是一个知识索引项目，它不创造知识，只做整合和指引。每个条目告诉你：
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **这是什么**：一句话概述
+- **为什么不学会有损失**：不掌握这个知识的代价
+- **核心知识**：最精华的内容
+- **怎么学**：精选书籍、课程、文章资源
+- **自测标准**：你真的学会了吗？
+- **知识网络**：这个知识和什么相关？下一步学什么？
 
-## Expanding the ESLint configuration
+目前包含 **8 大领域、32 个知识条目**，持续扩展中。
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 知识领域 / Knowledge Areas
+
+| 领域 | 内容 |
+|------|------|
+| 📚 基础能力 | 阅读、笔记、写作、沟通、时间管理 |
+| 🧠 思维与学习 | 批判性思维、第一性原理、费曼学习法、刻意练习 |
+| 💪 身心健康 | 睡眠、健身、跑步、营养、情绪管理、压力管理、冥想 |
+| 💼 工作与事业 | 编程入门、第一份工作、职业规划 |
+| 💰 财务与理财 | 理财入门、投资基础 |
+| 👨‍👩‍👧‍👦 家庭与情感 | 亲密关系（更多条目待添加） |
+| 🌍 社会与公民 | 经济学思维 |
+| 🏛️ 人生与意义 | （待填充） |
+
+---
+
+## 技术栈 / Tech Stack
+
+- **框架**: React 19 + Vite
+- **数据**: JSON 文件，自动加载
+- **样式**: 纯 CSS，支持亮色/暗色主题
+
+### 启动 / Dev
+
+```bash
+cd life-courses
+pnpm install
+pnpm run dev
+```
+
+### 构建 / Build
+
+```bash
+pnpm run build
+```
+
+---
+
+## 协议 / License
+
+[MIT](./LICENSE)
+
+Copyright (c) 2026 [你的名字]
+
+允许复制、修改、商业使用，但必须保留上述版权声明。
+Free to use, modify, and distribute — attribution required.

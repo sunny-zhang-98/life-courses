@@ -36,17 +36,6 @@ export default function KnowledgeCard({ knowledge, learnedIds, onMarkLearned, on
         </div>
       </div>
 
-      {/* 为什么要学 */}
-      {knowledge.whyLearn && (
-        <div className="detail-why-section">
-          <div className="detail-why-icon">🎯</div>
-          <div>
-            <div className="detail-why-label">为什么要学</div>
-            <div className="detail-why-text">{knowledge.whyLearn}</div>
-          </div>
-        </div>
-      )}
-
       {/* 不学会损失什么 */}
       {knowledge.costOfIgnorance && (
         <div className="detail-why-section">

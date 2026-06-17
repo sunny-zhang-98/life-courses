@@ -70,13 +70,7 @@ export default function HomeView() {
   }, [])
 
   const handleNavigate = useCallback((id) => {
-    const entry = knowledgeMap[id]
-    if (entry && (entry.children || []).length > 0) {
-      setCurrentId(id)
-      setSelectedId(null)
-    } else {
-      setSelectedId(id)
-    }
+    setSelectedId(id)
   }, [])
 
   const handleMarkLearned = useCallback((id) => {
