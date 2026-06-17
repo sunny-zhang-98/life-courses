@@ -51,9 +51,8 @@
     "emotion-management",
     "writing-basics"
   ],
-  "children": [],
-  "next": [
-    "first-job"
+  "children": [
+    "never-split-the-difference"
   ],
   "costOfIgnorance": "如果以为自己说清楚了，其实对方完全没听懂。"
 }

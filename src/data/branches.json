@@ -56,6 +56,14 @@
     "order": 1
   },
   {
+    "id": "entrepreneurship",
+    "name": "创业",
+    "description": "从想法到商业——创业思维与方法论",
+    "icon": "🚀",
+    "parentId": "career",
+    "order": 2
+  },
+  {
     "id": "frontend",
     "name": "前端开发",
     "description": "浏览器端开发",

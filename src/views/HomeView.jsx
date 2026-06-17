@@ -1,8 +1,12 @@
 import { useState, useEffect, useCallback } from 'react'
-import { knowledgeList, knowledgeMap, getChildren, getParent } from '../data/index.js'
+import { useNavigate, useSearchParams } from 'react-router-dom'
+import {
+  knowledgeList, knowledgeMap, getChildren, getParent,
+  relationList, setActiveRelationId, getRelationLinks
+} from '../data/index.js'
 import { computeLayout } from '../components/TreeLayout.js'
 import SkillTree from '../components/SkillTree.jsx'
-import KnowledgeCard from '../components/KnowledgeCard.jsx'
+import BottomToolbar from '../components/BottomToolbar.jsx'
 
 function loadLearned() {
   try { return JSON.parse(localStorage.getItem('life-courses-learned') || '[]') }
@@ -10,6 +14,15 @@ function loadLearned() {
 }
 function saveLearned(ids) {
   localStorage.setItem('life-courses-learned', JSON.stringify(ids))
+}
+
+function loadActiveRelation() {
+  try { return localStorage.getItem('life-courses-relation') || '' }
+  catch { return '' }
+}
+function saveActiveRelation(id) {
+  if (id) localStorage.setItem('life-courses-relation', id)
+  else localStorage.removeItem('life-courses-relation')
 }
 
 /** Walk up parent chain to build breadcrumb path */
@@ -21,13 +34,12 @@ function getPathChain(id) {
     const p = getParent(cur)
     cur = p ? p.id : null
   }
-  return chain // [root, ..., current]
+  return chain
 }
 
 /** Get the list of children for a given node, or root nodes if null */
 function getChildrenFor(nodeId) {
   const items = nodeId ? getChildren(nodeId) : getRootNodes()
-  // Sort by parent's children array order, or by original list order
   if (nodeId && knowledgeMap[nodeId]) {
     const order = knowledgeMap[nodeId].children || []
     items.sort((a, b) => order.indexOf(a.id) - order.indexOf(b.id))
@@ -40,38 +52,62 @@ function getRootNodes() {
 }
 
 export default function HomeView() {
-  const [currentId, setCurrentId] = useState(null) // null = root level
-  const [selectedId, setSelectedId] = useState(null) // detail panel
+  const navigate = useNavigate()
+  const [searchParams] = useSearchParams()
+  const folderParam = searchParams.get('folder') || null
+
+  const [currentId, setCurrentId] = useState(folderParam)
   const [learnedIds, setLearnedIds] = useState(loadLearned)
+  const [activeRelId, setActiveRelId] = useState(() => {
+    const saved = loadActiveRelation()
+    if (saved && relationList.some(r => r.id === saved)) return saved
+    return relationList.find(r => r.default)?.id || (relationList[0]?.id || null)
+  })
+
+  // Sync folder from URL on popstate
+  useEffect(() => {
+    setCurrentId(folderParam)
+  }, [folderParam])
 
   useEffect(() => { saveLearned(learnedIds) }, [learnedIds])
+  useEffect(() => { saveActiveRelation(activeRelId) }, [activeRelId])
+
+  useEffect(() => {
+    setActiveRelationId(activeRelId)
+  }, [activeRelId])
 
   const siblings = getChildrenFor(currentId)
   const currentEntry = currentId ? knowledgeMap[currentId] : null
   const pathChain = currentId ? getPathChain(currentId) : []
 
+  const nextMap = getRelationLinks(activeRelId)
   const { nodes, edges } = computeLayout(siblings.map(k => ({
     ...k,
     learned: learnedIds.includes(k.id)
-  })))
+  })), nextMap)
 
   const handleNodeClick = useCallback((id, e) => {
     if (e?.ctrlKey || e?.metaKey) {
-      // Ctrl+Click — enter folder if it has children
+      // Ctrl+Click — enter folder (navigate to this node's children view)
       const entry = knowledgeMap[id]
       if (entry && (entry.children || []).length > 0) {
-        setCurrentId(id)
-        setSelectedId(null)
-        return
+        navigate(`/?folder=${id}`)
       }
+      return
     }
-    // Normal click — open detail panel
-    setSelectedId(id)
-  }, [])
+    // Normal click — navigate to detail page
+    const folder = currentId || ''
+    navigate(`/knowledge/${id}?folder=${folder}`)
+  }, [currentId, navigate])
 
-  const handleNavigate = useCallback((id) => {
-    setSelectedId(id)
-  }, [])
+  const handleBreadcrumbClick = useCallback((id) => {
+    if (id === currentId && id !== null) return
+    if (id) {
+      navigate(`/?folder=${id}`)
+    } else {
+      navigate('/')
+    }
+  }, [currentId, navigate])
 
   const handleMarkLearned = useCallback((id) => {
     setLearnedIds(prev =>
@@ -79,33 +115,28 @@ export default function HomeView() {
     )
   }, [])
 
-  const selectedKnowledge = selectedId ? knowledgeMap[selectedId] : null
+  const handleRelationChange = useCallback((relId) => {
+    setActiveRelId(relId)
+  }, [])
 
-  // Enter → enter folder, Esc → close detail / go up
+  // Esc → go up one folder level
   useEffect(() => {
     const handler = (e) => {
-      if (e.key === 'Enter' && selectedId) {
-        const entry = knowledgeMap[selectedId]
-        if (entry && (entry.children || []).length > 0) {
-          e.preventDefault()
-          setCurrentId(selectedId)
-          setSelectedId(null)
-        }
-      }
       if (e.key === 'Escape') {
-        if (selectedId) {
-          setSelectedId(null)
-        } else if (currentId) {
+        if (currentId) {
           const parent = getParent(currentId)
-          setCurrentId(parent ? parent.id : null)
+          if (parent) {
+            navigate(`/?folder=${parent.id}`)
+          } else {
+            navigate('/')
+          }
         }
       }
     }
     window.addEventListener('keydown', handler)
     return () => window.removeEventListener('keydown', handler)
-  }, [selectedId, currentId])
+  }, [currentId, navigate])
 
-  const rootCount = getRootNodes().length
   const allCount = knowledgeList.length
 
   return (
@@ -114,7 +145,7 @@ export default function HomeView() {
       <div className="nav-bar">
         <div style={{ display: 'flex', alignItems: 'center', gap: 6, flexWrap: 'wrap' }}>
           <span
-            onClick={() => { setCurrentId(null); setSelectedId(null) }}
+            onClick={() => navigate('/')}
             style={{
               cursor: 'pointer',
               fontSize: '1rem',
@@ -128,7 +159,7 @@ export default function HomeView() {
             <span key={id} style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
               <span style={{ color: 'var(--color-text-dim)' }}>/</span>
               <span
-                onClick={() => { setCurrentId(id); setSelectedId(null) }}
+                onClick={() => handleBreadcrumbClick(id)}
                 style={{
                   cursor: 'pointer',
                   fontSize: '1rem',
@@ -143,8 +174,28 @@ export default function HomeView() {
             </span>
           ))}
         </div>
-        <div style={{ fontSize: '0.8rem', color: 'var(--color-text-dim)' }}>
-          {learnedIds.length} / {allCount} 已学
+
+        {/* Relation selector + progress */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+          {relationList.length > 1 && (
+            <div className="relation-selector">
+              <select
+                value={activeRelId}
+                onChange={e => handleRelationChange(e.target.value)}
+                className="relation-select"
+                title="切换学习路径"
+              >
+                {relationList.map(rel => (
+                  <option key={rel.id} value={rel.id}>
+                    {rel.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+          )}
+          <div style={{ fontSize: '0.8rem', color: 'var(--color-text-dim)', whiteSpace: 'nowrap' }}>
+            {learnedIds.length} / {allCount} 已学
+          </div>
         </div>
       </div>
 
@@ -170,21 +221,8 @@ export default function HomeView() {
         )}
       </div>
 
-      {/* Detail panel overlay */}
-      {selectedKnowledge && (
-        <div className="detail-panel-overlay" onClick={() => setSelectedId(null)}>
-          <div className="detail-panel" onClick={e => e.stopPropagation()}>
-            <button className="detail-panel-close" onClick={() => setSelectedId(null)}>✕</button>
-            <KnowledgeCard
-              knowledge={selectedKnowledge}
-              learnedIds={learnedIds}
-              onMarkLearned={handleMarkLearned}
-              onNavigate={handleNavigate}
-              onEnterFolder={(id) => { setCurrentId(id); setSelectedId(null) }}
-            />
-          </div>
-        </div>
-      )}
+      {/* Bottom toolbar */}
+      <BottomToolbar />
     </div>
   )
 }

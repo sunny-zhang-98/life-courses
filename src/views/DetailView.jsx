@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, useSearchParams } from 'react-router-dom'
 import { knowledgeMap } from '../data/index.js'
 import KnowledgeCard from '../components/KnowledgeCard.jsx'
+import BottomToolbar from '../components/BottomToolbar.jsx'
 
 function loadLearnedIds() {
   try {
@@ -17,6 +18,8 @@ function saveLearnedIds(ids) {
 export default function DetailView() {
   const { knowledgeId } = useParams()
   const navigate = useNavigate()
+  const [searchParams] = useSearchParams()
+  const folder = searchParams.get('folder') || ''
   const [learnedIds, setLearnedIds] = useState(loadLearnedIds)
   const [currentId, setCurrentId] = useState(knowledgeId)
 
@@ -28,58 +31,78 @@ export default function DetailView() {
     saveLearnedIds(learnedIds)
   }, [learnedIds])
 
-  const knowledge = knowledgeMap[currentId]
+  const handleBack = () => {
+    if (folder) {
+      navigate(`/?folder=${folder}`)
+    } else {
+      navigate('/')
+    }
+  }
 
   const handleNavigate = (id) => {
-    setCurrentId(id)
-    window.scrollTo(0, 0)
+    navigate(`/knowledge/${id}?folder=${folder}`)
   }
+
+  const knowledge = knowledgeMap[currentId]
+
+  // Esc to go back
+  useEffect(() => {
+    const handler = (e) => {
+      if (e.key === 'Escape') {
+        handleBack()
+      }
+    }
+    window.addEventListener('keydown', handler)
+    return () => window.removeEventListener('keydown', handler)
+  }, [folder])
 
   if (!knowledge) {
     return (
       <div className="detail-view">
-        <div style={{ textAlign: 'center', paddingTop: '80px' }}>
-          <h2 style={{ color: 'var(--color-text-heading)', marginBottom: 16 }}>
-            未找到该知识条目
-          </h2>
-          <button
-            onClick={() => navigate('/')}
-            style={{
-              background: 'var(--color-primary)',
-              color: '#fff',
-              border: 'none',
-              padding: '10px 24px',
-              borderRadius: '8px',
-              fontSize: '1rem',
-              cursor: 'pointer'
-            }}
-          >
-            返回首页
-          </button>
+        <div className="detail-view-body">
+          <div style={{ textAlign: 'center', paddingTop: '80px' }}>
+            <h2 style={{ color: 'var(--color-text-heading)', marginBottom: 16 }}>
+              未找到该知识条目
+            </h2>
+            <button
+              onClick={() => navigate('/')}
+              style={{
+                background: 'var(--color-primary)',
+                color: '#fff',
+                border: 'none',
+                padding: '10px 24px',
+                borderRadius: '8px',
+                fontSize: '1rem',
+                cursor: 'pointer'
+              }}
+            >
+              返回首页
+            </button>
+          </div>
         </div>
+        <BottomToolbar />
       </div>
     )
   }
 
   return (
     <div className="detail-view">
-      <button
-        className="detail-back"
-        onClick={() => navigate(-1)}
-        style={{ marginBottom: 20 }}
-      >
-        ← 返回
-      </button>
-      <KnowledgeCard
-        knowledge={knowledge}
-        learnedIds={learnedIds}
-        onMarkLearned={(id) => {
-          setLearnedIds(prev =>
-            prev.includes(id) ? prev.filter(i => i !== id) : [...prev, id]
-          )
-        }}
-        onNavigate={handleNavigate}
-      />
+      <div className="detail-view-top">
+        <button className="detail-back" onClick={handleBack}>← 返回</button>
+      </div>
+      <div className="detail-view-body">
+        <KnowledgeCard
+          knowledge={knowledge}
+          learnedIds={learnedIds}
+          onMarkLearned={(id) => {
+            setLearnedIds(prev =>
+              prev.includes(id) ? prev.filter(i => i !== id) : [...prev, id]
+            )
+          }}
+          onNavigate={handleNavigate}
+        />
+      </div>
+      <BottomToolbar />
     </div>
   )
 }

@@ -32,7 +32,10 @@
     "thinking-learning",
     "health-wellness"
   ],
-  "children": [],
-  "next": [],
+  "children": [
+    "death-education",
+    "wang-yangming",
+    "buddhism-taoism-confucianism"
+  ],
   "costOfIgnorance": "花一辈子去追求别人定义的成功→到头来发现那不是自己想要的。逃避对衰老和死亡的思考→面对时毫无准备。"
 }
