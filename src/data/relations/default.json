@@ -4,99 +4,381 @@
   "description": "完整的知识体系学习顺序，覆盖所有领域的自然递进关系",
   "default": true,
   "links": [
-    { "from": "atomic-habits", "to": "deliberate-practice" },
-    { "from": "brain", "to": "nervous-system" },
-    { "from": "brain", "to": "thinking-learning" },
-    { "from": "buddhism-taoism-confucianism", "to": "meditation" },
-    { "from": "cardiovascular-system", "to": "exercise-basics" },
-    { "from": "career-planning", "to": "entrepreneurship" },
-    { "from": "communication", "to": "never-split-the-difference" },
-    { "from": "communication", "to": "first-job" },
-    { "from": "communication", "to": "emotion-management" },
-    { "from": "critical-thinking", "to": "first-principles" },
-    { "from": "critical-thinking", "to": "feynman-method" },
-    { "from": "critical-thinking", "to": "deliberate-practice" },
-    { "from": "death-education", "to": "wang-yangming" },
-    { "from": "death-education", "to": "buddhism-taoism-confucianism" },
-    { "from": "deliberate-practice", "to": "atomic-habits" },
-    { "from": "deliberate-practice", "to": "xunxujianjin" },
-    { "from": "deliberate-practice", "to": "critical-thinking" },
-    { "from": "digestive-system", "to": "nutrition-basics" },
-    { "from": "economy-thinking", "to": "society-citizenship" },
-    { "from": "economy-thinking", "to": "critical-thinking" },
-    { "from": "emotion-management", "to": "stress-management" },
-    { "from": "emotion-management", "to": "communication" },
-    { "from": "entrepreneurship", "to": "lean-startup" },
-    { "from": "entrepreneurship", "to": "finance-basics" },
-    { "from": "entrepreneurship", "to": "first-principles" },
-    { "from": "exercise-basics", "to": "running" },
-    { "from": "exercise-basics", "to": "taiji" },
-    { "from": "exercise-basics", "to": "tiaocao" },
-    { "from": "exercise-basics", "to": "baduanjin" },
-    { "from": "exercise-basics", "to": "nutrition-basics" },
-    { "from": "exercise-basics", "to": "muscular-system" },
-    { "from": "feynman-method", "to": "deliberate-practice" },
-    { "from": "feynman-method", "to": "critical-thinking" },
-    { "from": "finance-basics", "to": "investing-basics" },
-    { "from": "finance-basics", "to": "entrepreneurship" },
-    { "from": "first-job", "to": "career-planning" },
-    { "from": "first-job", "to": "never-split-the-difference" },
-    { "from": "first-job", "to": "communication" },
-    { "from": "first-principles", "to": "critical-thinking" },
-    { "from": "first-principles", "to": "entrepreneurship" },
-    { "from": "first-principles", "to": "economy-thinking" },
-    { "from": "heart", "to": "cardiovascular-system" },
-    { "from": "heart", "to": "exercise-basics" },
-    { "from": "immune-system", "to": "sleep-health" },
-    { "from": "intimate-relationships", "to": "communication" },
-    { "from": "intimate-relationships", "to": "emotion-management" },
-    { "from": "investing-basics", "to": "economy-thinking" },
-    { "from": "kidneys", "to": "cardiovascular-system" },
-    { "from": "kidneys", "to": "heart" },
-    { "from": "lean-startup", "to": "finance-basics" },
-    { "from": "learn-to-code", "to": "first-job" },
-    { "from": "learn-to-code", "to": "career-planning" },
-    { "from": "life-purpose", "to": "death-education" },
-    { "from": "liver", "to": "digestive-system" },
-    { "from": "liver", "to": "nutrition-basics" },
-    { "from": "lungs", "to": "respiratory-system" },
-    { "from": "lungs", "to": "exercise-basics" },
-    { "from": "muscular-system", "to": "exercise-basics" },
-    { "from": "muscular-system", "to": "skeletal-system" },
-    { "from": "nervous-system", "to": "meditation" },
-    { "from": "never-split-the-difference", "to": "communication" },
-    { "from": "never-split-the-difference", "to": "career-planning" },
-    { "from": "never-split-the-difference", "to": "emotion-management" },
-    { "from": "note-taking", "to": "writing-basics" },
-    { "from": "note-taking", "to": "feynman-method" },
-    { "from": "nutrition-basics", "to": "human-body" },
-    { "from": "nutrition-basics", "to": "digestive-system" },
-    { "from": "reading", "to": "note-taking" },
-    { "from": "respiratory-system", "to": "exercise-basics" },
-    { "from": "running", "to": "zhanzhuang" },
-    { "from": "running", "to": "taiji" },
-    { "from": "running", "to": "muscular-system" },
-    { "from": "skeletal-system", "to": "exercise-basics" },
-    { "from": "skin", "to": "nutrition-basics" },
-    { "from": "sleep-health", "to": "exercise-basics" },
-    { "from": "sleep-health", "to": "meditation" },
-    { "from": "sleep-health", "to": "brain" },
-    { "from": "stomach", "to": "digestive-system" },
-    { "from": "stomach", "to": "nutrition-basics" },
-    { "from": "stress-management", "to": "meditation" },
-    { "from": "stress-management", "to": "nervous-system" },
-    { "from": "taiji", "to": "zhanzhuang" },
-    { "from": "taiji", "to": "baduanjin" },
-    { "from": "time-management", "to": "xunxujianjin" },
-    { "from": "time-management", "to": "atomic-habits" },
-    { "from": "time-management", "to": "communication" },
-    { "from": "wang-yangming", "to": "buddhism-taoism-confucianism" },
-    { "from": "wang-yangming", "to": "meditation" },
-    { "from": "writing-basics", "to": "communication" },
-    { "from": "writing-basics", "to": "critical-thinking" },
-    { "from": "xunxujianjin", "to": "deliberate-practice" },
-    { "from": "xunxujianjin", "to": "atomic-habits" },
-    { "from": "xunxujianjin", "to": "exercise-basics" },
-    { "from": "zhanzhuang", "to": "baduanjin" }
+    {
+      "from": "掌控习惯",
+      "to": "刻意练习"
+    },
+    {
+      "from": "大脑",
+      "to": "神经系统"
+    },
+    {
+      "from": "大脑",
+      "to": "思维学习"
+    },
+    {
+      "from": "佛道儒思想",
+      "to": "冥想正念"
+    },
+    {
+      "from": "心血管系统",
+      "to": "科学健身"
+    },
+    {
+      "from": "职业规划",
+      "to": "创业"
+    },
+    {
+      "from": "沟通与表达",
+      "to": "掌控谈话"
+    },
+    {
+      "from": "沟通与表达",
+      "to": "第一份工作"
+    },
+    {
+      "from": "沟通与表达",
+      "to": "情绪管理"
+    },
+    {
+      "from": "批判性思维",
+      "to": "第一性原理"
+    },
+    {
+      "from": "批判性思维",
+      "to": "费曼学习法"
+    },
+    {
+      "from": "批判性思维",
+      "to": "刻意练习"
+    },
+    {
+      "from": "死亡教育",
+      "to": "王阳明心学"
+    },
+    {
+      "from": "死亡教育",
+      "to": "佛道儒思想"
+    },
+    {
+      "from": "刻意练习",
+      "to": "掌控习惯"
+    },
+    {
+      "from": "刻意练习",
+      "to": "循序渐进"
+    },
+    {
+      "from": "刻意练习",
+      "to": "批判性思维"
+    },
+    {
+      "from": "消化系统",
+      "to": "营养基础"
+    },
+    {
+      "from": "经济学思维",
+      "to": "社会公民"
+    },
+    {
+      "from": "经济学思维",
+      "to": "批判性思维"
+    },
+    {
+      "from": "情绪管理",
+      "to": "压力管理"
+    },
+    {
+      "from": "情绪管理",
+      "to": "沟通与表达"
+    },
+    {
+      "from": "创业",
+      "to": "精益创业"
+    },
+    {
+      "from": "创业",
+      "to": "理财入门"
+    },
+    {
+      "from": "创业",
+      "to": "第一性原理"
+    },
+    {
+      "from": "科学健身",
+      "to": "跑步"
+    },
+    {
+      "from": "科学健身",
+      "to": "太极"
+    },
+    {
+      "from": "科学健身",
+      "to": "跳操"
+    },
+    {
+      "from": "科学健身",
+      "to": "八段锦"
+    },
+    {
+      "from": "科学健身",
+      "to": "营养基础"
+    },
+    {
+      "from": "科学健身",
+      "to": "肌肉系统"
+    },
+    {
+      "from": "费曼学习法",
+      "to": "刻意练习"
+    },
+    {
+      "from": "费曼学习法",
+      "to": "批判性思维"
+    },
+    {
+      "from": "理财入门",
+      "to": "投资基础"
+    },
+    {
+      "from": "理财入门",
+      "to": "创业"
+    },
+    {
+      "from": "第一份工作",
+      "to": "职业规划"
+    },
+    {
+      "from": "第一份工作",
+      "to": "掌控谈话"
+    },
+    {
+      "from": "第一份工作",
+      "to": "沟通与表达"
+    },
+    {
+      "from": "第一性原理",
+      "to": "批判性思维"
+    },
+    {
+      "from": "第一性原理",
+      "to": "创业"
+    },
+    {
+      "from": "第一性原理",
+      "to": "经济学思维"
+    },
+    {
+      "from": "心脏",
+      "to": "心血管系统"
+    },
+    {
+      "from": "心脏",
+      "to": "科学健身"
+    },
+    {
+      "from": "免疫系统",
+      "to": "睡眠健康"
+    },
+    {
+      "from": "亲密关系",
+      "to": "沟通与表达"
+    },
+    {
+      "from": "亲密关系",
+      "to": "情绪管理"
+    },
+    {
+      "from": "投资基础",
+      "to": "经济学思维"
+    },
+    {
+      "from": "肾脏",
+      "to": "心血管系统"
+    },
+    {
+      "from": "肾脏",
+      "to": "心脏"
+    },
+    {
+      "from": "精益创业",
+      "to": "理财入门"
+    },
+    {
+      "from": "编程入门",
+      "to": "第一份工作"
+    },
+    {
+      "from": "编程入门",
+      "to": "职业规划"
+    },
+    {
+      "from": "人生意义",
+      "to": "死亡教育"
+    },
+    {
+      "from": "肝脏",
+      "to": "消化系统"
+    },
+    {
+      "from": "肝脏",
+      "to": "营养基础"
+    },
+    {
+      "from": "肺",
+      "to": "呼吸系统"
+    },
+    {
+      "from": "肺",
+      "to": "科学健身"
+    },
+    {
+      "from": "肌肉系统",
+      "to": "科学健身"
+    },
+    {
+      "from": "肌肉系统",
+      "to": "骨骼系统"
+    },
+    {
+      "from": "神经系统",
+      "to": "冥想正念"
+    },
+    {
+      "from": "掌控谈话",
+      "to": "沟通与表达"
+    },
+    {
+      "from": "掌控谈话",
+      "to": "职业规划"
+    },
+    {
+      "from": "掌控谈话",
+      "to": "情绪管理"
+    },
+    {
+      "from": "笔记方法",
+      "to": "写作基础"
+    },
+    {
+      "from": "笔记方法",
+      "to": "费曼学习法"
+    },
+    {
+      "from": "营养基础",
+      "to": "人体知识"
+    },
+    {
+      "from": "营养基础",
+      "to": "消化系统"
+    },
+    {
+      "from": "有效阅读",
+      "to": "笔记方法"
+    },
+    {
+      "from": "呼吸系统",
+      "to": "科学健身"
+    },
+    {
+      "from": "跑步",
+      "to": "站桩"
+    },
+    {
+      "from": "跑步",
+      "to": "太极"
+    },
+    {
+      "from": "跑步",
+      "to": "肌肉系统"
+    },
+    {
+      "from": "骨骼系统",
+      "to": "科学健身"
+    },
+    {
+      "from": "皮肤",
+      "to": "营养基础"
+    },
+    {
+      "from": "睡眠健康",
+      "to": "科学健身"
+    },
+    {
+      "from": "睡眠健康",
+      "to": "冥想正念"
+    },
+    {
+      "from": "睡眠健康",
+      "to": "大脑"
+    },
+    {
+      "from": "胃",
+      "to": "消化系统"
+    },
+    {
+      "from": "胃",
+      "to": "营养基础"
+    },
+    {
+      "from": "压力管理",
+      "to": "冥想正念"
+    },
+    {
+      "from": "压力管理",
+      "to": "神经系统"
+    },
+    {
+      "from": "太极",
+      "to": "站桩"
+    },
+    {
+      "from": "太极",
+      "to": "八段锦"
+    },
+    {
+      "from": "时间管理",
+      "to": "循序渐进"
+    },
+    {
+      "from": "时间管理",
+      "to": "掌控习惯"
+    },
+    {
+      "from": "时间管理",
+      "to": "沟通与表达"
+    },
+    {
+      "from": "王阳明心学",
+      "to": "佛道儒思想"
+    },
+    {
+      "from": "王阳明心学",
+      "to": "冥想正念"
+    },
+    {
+      "from": "写作基础",
+      "to": "沟通与表达"
+    },
+    {
+      "from": "写作基础",
+      "to": "批判性思维"
+    },
+    {
+      "from": "循序渐进",
+      "to": "刻意练习"
+    },
+    {
+      "from": "循序渐进",
+      "to": "掌控习惯"
+    },
+    {
+      "from": "循序渐进",
+      "to": "科学健身"
+    },
+    {
+      "from": "站桩",
+      "to": "八段锦"
+    }
   ]
 }

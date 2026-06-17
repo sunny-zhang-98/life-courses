@@ -1,0 +1,51 @@
+{
+  "id": "有效阅读",
+  "title": "如何有效阅读一本书",
+  "summary": "掌握主动阅读方法，从读书中真正学到东西",
+  "branchIds": [
+    "general",
+    "study-method"
+  ],
+  "resources": [
+    {
+      "type": "book",
+      "title": "如何阅读一本书",
+      "author": "Mortimer Adler",
+      "url": "https://book.douban.com/subject/1013208/"
+    },
+    {
+      "type": "video",
+      "title": "主动阅读法入门",
+      "platform": "B站",
+      "url": "https://www.bilibili.com"
+    },
+    {
+      "type": "article",
+      "title": "SQ3R 阅读法详解",
+      "platform": "知乎",
+      "url": "https://zhihu.com"
+    }
+  ],
+  "journey": [
+    "刚开始觉得读书慢是效率低，后来发现慢是因为在思考",
+    "实践 SQ3R 方法后，阅读效率和理解深度明显提升",
+    "逐渐养成 '不动笔墨不读书' 的习惯"
+  ],
+  "knowledge": {
+    "core": "SQ3R 阅读法：Survey（浏览）→ Question（提问）→ Read（阅读）→ Recite（复述）→ Review（复习）",
+    "detail": "适用于非虚构类书籍的主动阅读方法。先浏览目录和章节结构，带着问题去读，读完后用自己的话复述，定期复习巩固。不同类型书籍需要不同的阅读策略。"
+  },
+  "selfTest": [
+    "你能用一句话说清楚这本书的核心论点吗？",
+    "你能否向别人复述这一章的主要内容？",
+    "读完一周后，你还记得几个关键点？",
+    "你能把书中的方法应用到实际生活中吗？"
+  ],
+  "related": [
+    "笔记方法",
+    "写作基础",
+    "时间管理"
+  ],
+  "children": [],
+  "lesson": "如果从头到尾逐字阅读，没有带着问题读。"
+}

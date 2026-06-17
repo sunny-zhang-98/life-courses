@@ -1,0 +1,50 @@
+{
+  "id": "理财入门",
+  "title": "个人理财入门",
+  "summary": "理解金钱运作，建立健康的财务习惯",
+  "branchIds": [
+    "life",
+    "finance"
+  ],
+  "resources": [
+    {
+      "type": "book",
+      "title": "穷爸爸富爸爸",
+      "author": "Robert Kiyosaki",
+      "url": "https://book.douban.com/subject/1033778/"
+    },
+    {
+      "type": "book",
+      "title": "小狗钱钱",
+      "author": "Bodo Schäfer",
+      "url": "https://book.douban.com/subject/1050210/"
+    },
+    {
+      "type": "video",
+      "title": "理财入门指南",
+      "platform": "B站",
+      "url": "https://www.bilibili.com"
+    }
+  ],
+  "journey": [
+    "工作两三年还是月光族，开始慌了",
+    "学了 50/30/20 预算法，终于存下钱了",
+    "理解复利后，后悔没早点开始"
+  ],
+  "knowledge": {
+    "core": "理财四步：1）记账了解支出 2）50/30/20 预算（必需/想要/储蓄） 3）建立 3-6 个月应急金 4）闲钱投资（指数基金定投是入门首选）",
+    "detail": "复利是世界第八大奇迹。越早开始，时间越站在你这边。先保障再投资：保险 → 应急金 → 低风险投资 → 高风险投资。不懂的东西不要碰。"
+  },
+  "selfTest": [
+    "你知道自己每个月花多少钱吗？",
+    "你有 3 个月生活费的应急储蓄吗？",
+    "你能区分 '需要' 和 '想要' 吗？",
+    "你知道自己买的理财产品到底是什么吗？"
+  ],
+  "related": [
+    "经济学思维",
+    "科学健身"
+  ],
+  "children": [],
+  "lesson": "不了解这一领域，可能会在日常决策中付出不必要的代价。"
+}

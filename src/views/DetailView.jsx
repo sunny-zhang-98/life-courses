@@ -88,7 +88,7 @@ export default function DetailView() {
   return (
     <div className="detail-view">
       <div className="detail-view-top">
-        <button className="detail-back" onClick={handleBack}>← 返回</button>
+        <button className="detail-back" onClick={handleBack}>← 返回 <span className="esc-hint">Esc</span></button>
       </div>
       <div className="detail-view-body">
         <KnowledgeCard

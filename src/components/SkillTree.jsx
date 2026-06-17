@@ -19,9 +19,31 @@ const MAX_SCALE = 2.0
 const NODE_W = 160
 const NODE_H = 72
 
-function truncate(str, maxLen) {
-  if (!str || str.length <= maxLen) return str || ''
-  return str.slice(0, maxLen) + '…'
+// 将文字按宽度换行，最多 maxLines 行，超出加 …
+function wrapText(ctx, text, maxWidth, maxLines) {
+  if (!text) return ['']
+  const lines = []
+  let current = ''
+  for (const ch of text) {
+    const test = current + ch
+    if (ctx.measureText(test).width > maxWidth && current.length > 0) {
+      lines.push(current)
+      current = ch
+      if (lines.length >= maxLines) {
+        // 最后一行末尾加 …
+        let last = lines[maxLines - 1]
+        while (last.length > 0 && ctx.measureText(last + '…').width > maxWidth) {
+          last = last.slice(0, -1)
+        }
+        lines[maxLines - 1] = last + '…'
+        return lines
+      }
+    } else {
+      current = test
+    }
+  }
+  if (current) lines.push(current)
+  return lines
 }
 
 export default function SkillTree({ nodes, edges, onNodeClick, learnedIds }) {
@@ -167,11 +189,14 @@ export default function SkillTree({ nodes, edges, onNodeClick, learnedIds }) {
       ctx.textBaseline = 'middle'
       ctx.fillText(n.title, x + NODE_W / 2, y + 22)
 
-      // Summary (truncated)
-      const summary = truncate(n.summary, 15)
+      // Summary (最多 3 行)
       ctx.fillStyle = c.dim
       ctx.font = '10px -apple-system, "PingFang SC", sans-serif'
-      ctx.fillText(summary, x + NODE_W / 2, y + 48)
+      const lines = wrapText(ctx, n.summary || '', NODE_W - 20, 3)
+      const lineH = 13
+      lines.forEach((line, i) => {
+        ctx.fillText(line, x + NODE_W / 2, y + 37 + i * lineH)
+      })
 
       if (learned) {
         ctx.fillStyle = '#00b894'

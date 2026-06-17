@@ -4,36 +4,129 @@
   "description": "面向软件工程师/程序员的精简学习路径，侧重基础能力、思维训练和职业发展",
   "default": false,
   "links": [
-    { "from": "reading", "to": "note-taking" },
-    { "from": "reading", "to": "critical-thinking" },
-    { "from": "note-taking", "to": "feynman-method" },
-    { "from": "note-taking", "to": "writing-basics" },
-    { "from": "critical-thinking", "to": "first-principles" },
-    { "from": "critical-thinking", "to": "feynman-method" },
-    { "from": "critical-thinking", "to": "learn-to-code" },
-    { "from": "feynman-method", "to": "learn-to-code" },
-    { "from": "time-management", "to": "xunxujianjin" },
-    { "from": "time-management", "to": "atomic-habits" },
-    { "from": "xunxujianjin", "to": "deliberate-practice" },
-    { "from": "atomic-habits", "to": "deliberate-practice" },
-    { "from": "learn-to-code", "to": "first-job" },
-    { "from": "learn-to-code", "to": "communication" },
-    { "from": "first-job", "to": "career-planning" },
-    { "from": "first-job", "to": "never-split-the-difference" },
-    { "from": "communication", "to": "never-split-the-difference" },
-    { "from": "communication", "to": "first-job" },
-    { "from": "career-planning", "to": "entrepreneurship" },
-    { "from": "entrepreneurship", "to": "lean-startup" },
-    { "from": "entrepreneurship", "to": "finance-basics" },
-    { "from": "finance-basics", "to": "investing-basics" },
-    { "from": "investing-basics", "to": "economy-thinking" },
-    { "from": "writing-basics", "to": "communication" },
-    { "from": "sleep-health", "to": "exercise-basics" },
-    { "from": "sleep-health", "to": "meditation" },
-    { "from": "exercise-basics", "to": "running" },
-    { "from": "running", "to": "zhanzhuang" },
-    { "from": "emotion-management", "to": "stress-management" },
-    { "from": "stress-management", "to": "meditation" },
-    { "from": "economy-thinking", "to": "critical-thinking" }
+    {
+      "from": "有效阅读",
+      "to": "笔记方法"
+    },
+    {
+      "from": "有效阅读",
+      "to": "批判性思维"
+    },
+    {
+      "from": "笔记方法",
+      "to": "费曼学习法"
+    },
+    {
+      "from": "笔记方法",
+      "to": "写作基础"
+    },
+    {
+      "from": "批判性思维",
+      "to": "第一性原理"
+    },
+    {
+      "from": "批判性思维",
+      "to": "费曼学习法"
+    },
+    {
+      "from": "批判性思维",
+      "to": "编程入门"
+    },
+    {
+      "from": "费曼学习法",
+      "to": "编程入门"
+    },
+    {
+      "from": "时间管理",
+      "to": "循序渐进"
+    },
+    {
+      "from": "时间管理",
+      "to": "掌控习惯"
+    },
+    {
+      "from": "循序渐进",
+      "to": "刻意练习"
+    },
+    {
+      "from": "掌控习惯",
+      "to": "刻意练习"
+    },
+    {
+      "from": "编程入门",
+      "to": "第一份工作"
+    },
+    {
+      "from": "编程入门",
+      "to": "沟通与表达"
+    },
+    {
+      "from": "第一份工作",
+      "to": "职业规划"
+    },
+    {
+      "from": "第一份工作",
+      "to": "掌控谈话"
+    },
+    {
+      "from": "沟通与表达",
+      "to": "掌控谈话"
+    },
+    {
+      "from": "沟通与表达",
+      "to": "第一份工作"
+    },
+    {
+      "from": "职业规划",
+      "to": "创业"
+    },
+    {
+      "from": "创业",
+      "to": "精益创业"
+    },
+    {
+      "from": "创业",
+      "to": "理财入门"
+    },
+    {
+      "from": "理财入门",
+      "to": "投资基础"
+    },
+    {
+      "from": "投资基础",
+      "to": "经济学思维"
+    },
+    {
+      "from": "写作基础",
+      "to": "沟通与表达"
+    },
+    {
+      "from": "睡眠健康",
+      "to": "科学健身"
+    },
+    {
+      "from": "睡眠健康",
+      "to": "冥想正念"
+    },
+    {
+      "from": "科学健身",
+      "to": "跑步"
+    },
+    {
+      "from": "跑步",
+      "to": "站桩"
+    },
+    {
+      "from": "情绪管理",
+      "to": "压力管理"
+    },
+    {
+      "from": "压力管理",
+      "to": "冥想正念"
+    },
+    {
+      "from": "经济学思维",
+      "to": "批判性思维"
+    }
   ]
 }

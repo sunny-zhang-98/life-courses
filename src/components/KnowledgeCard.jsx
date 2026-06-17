@@ -25,27 +25,16 @@ export default function KnowledgeCard({ knowledge, learnedIds, onMarkLearned, on
   const content = (
     <div className="knowledge-detail">
       <div className="detail-top">
-      {/* ========== Header ========== */}
-      <div className="detail-header">
-        <h1 className="detail-title">{knowledge.title}</h1>
-        <p className="detail-summary">{knowledge.summary}</p>
-        <div className="detail-branch-tags">
-          {knowledgeBranches.map(b => (
-            <span key={b.id} className="branch-tag">{b.icon} {b.name}</span>
-          ))}
-        </div>
-      </div>
-
-      {/* 不学会损失什么 */}
-      {knowledge.costOfIgnorance && (
-        <div className="detail-why-section">
-          <div className="detail-why-icon">⚠️</div>
-          <div>
-            <div className="detail-why-label">不学会损失什么</div>
-            <div className="detail-why-text">{knowledge.costOfIgnorance}</div>
+        {/* ========== Header ========== */}
+        <div className="detail-header">
+          <h1 className="detail-title">{knowledge.title}</h1>
+          <p className="detail-summary">{knowledge.summary}</p>
+          <div className="detail-branch-tags">
+            {knowledgeBranches.map(b => (
+              <span key={b.id} className="branch-tag">{b.icon} {b.name}</span>
+            ))}
           </div>
         </div>
-      )}
       </div>
 
       <div className="detail-layout">
@@ -167,90 +156,88 @@ export default function KnowledgeCard({ knowledge, learnedIds, onMarkLearned, on
             </div>
           )}
         </aside>
+
         {/* ========== Main Content ========== */}
         <div className="detail-main">
           <div className="detail-grid">
 
-          {/* 自测标准 */}
-          {knowledge.selfTest?.length > 0 && (
-            <div className="detail-section">
-              <div className="detail-section-title">
-                <span className="detail-section-icon">✅</span>
-                自测标准
+            {/* ──── 1. 教训 ──── */}
+            {knowledge.lesson && (
+              <div className="detail-section">
+                <div className="detail-section-title">
+                  <span className="detail-section-icon">⚠️</span>
+                  教训
+                </div>
+                <div className="lesson-cost">{knowledge.lesson}</div>
               </div>
-              <ul className="detail-list">
-                {knowledge.selfTest.map((item, i) => (
-                  <li key={i} className="test">{item}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {/* 知识 */}
-          <div className="detail-section">
-            <div className="detail-section-title">
-              <span className="detail-section-icon">📖</span>
-              知识
-            </div>
-            <div className="knowledge-core">{knowledge.knowledge?.core}</div>
-            {knowledge.knowledge?.details && (
-              <div className="knowledge-details">{knowledge.knowledge.details}</div>
             )}
-          </div>
-          {/* 错误案例 */}
-          {knowledge.commonMistakes?.length > 0 && (
-            <div className="detail-section">
-              <div className="detail-section-title">
-                <span className="detail-section-icon">❌</span>
-                错误案例
-              </div>
-              <ul className="detail-list">
-                {knowledge.commonMistakes.map((item, i) => (
-                  <li key={i} className="mistake">{item}</li>
-                ))}
-              </ul>
-            </div>
-          )}
 
-          {/* 心路历程 */}
-          {knowledge.journey?.length > 0 && (
-            <div className="detail-section">
-              <div className="detail-section-title">
-                <span className="detail-section-icon">🧠</span>
-                心路历程
+            {/* ──── 2. 心路历程 ──── */}
+            {knowledge.journey?.length > 0 && (
+              <div className="detail-section">
+                <div className="detail-section-title">
+                  <span className="detail-section-icon">🧠</span>
+                  心路历程
+                </div>
+                <ul className="detail-list">
+                  {knowledge.journey.map((item, i) => (
+                    <li key={i} className="journey">{item}</li>
+                  ))}
+                </ul>
               </div>
-              <ul className="detail-list">
-                {knowledge.journey.map((item, i) => (
-                  <li key={i} className="journey">{item}</li>
-                ))}
-              </ul>
-            </div>
-          )}
+            )}
 
-          {/* 资源索引 */}
-          {knowledge.resources?.length > 0 && (
+            {/* ──── 3. 内容 ──── */}
             <div className="detail-section">
               <div className="detail-section-title">
-                <span className="detail-section-icon">🔗</span>
-                资源索引
+                <span className="detail-section-icon">📖</span>
+                内容
               </div>
-              <div className="resource-list">
-                {knowledge.resources.map((r, i) => (
-                  <div key={i} className="resource-item">
-                    <span className="resource-type">
-                      {RESOURCE_ICONS[r.type] || '🔗'} {r.type}
-                    </span>
-                    <span className="resource-title">{r.title}</span>
-                    {r.url && r.url !== '...' && (
-                      <a href={r.url} target="_blank" rel="noopener" className="resource-url">
-                        去学习 →
-                      </a>
-                    )}
-                  </div>
-                ))}
-              </div>
+              <div className="knowledge-core">{knowledge.knowledge?.core}</div>
+              {knowledge.knowledge?.detail && (
+                <div className="knowledge-detail-text">{knowledge.knowledge.detail}</div>
+              )}
             </div>
-          )}
+
+            {/* ──── 4. 检验标准 ──── */}
+            {knowledge.selfTest?.length > 0 && (
+              <div className="detail-section">
+                <div className="detail-section-title">
+                  <span className="detail-section-icon">✅</span>
+                  检验标准
+                </div>
+                <ul className="detail-list">
+                  {knowledge.selfTest.map((item, i) => (
+                    <li key={i} className="test">{item}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* ──── 5. 资源索引 ──── */}
+            {knowledge.resources?.length > 0 && (
+              <div className="detail-section">
+                <div className="detail-section-title">
+                  <span className="detail-section-icon">🔗</span>
+                  资源索引
+                </div>
+                <div className="resource-list">
+                  {knowledge.resources.map((r, i) => (
+                    <div key={i} className="resource-item">
+                      <span className="resource-type">
+                        {RESOURCE_ICONS[r.type] || '🔗'} {r.type}
+                      </span>
+                      <span className="resource-title">{r.title}</span>
+                      {r.url && r.url !== '...' && (
+                        <a href={r.url} target="_blank" rel="noopener" className="resource-url">
+                          去学习 →
+                        </a>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
 
           </div>{/* end detail-grid */}
         </div>
