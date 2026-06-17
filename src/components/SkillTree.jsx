@@ -1,10 +1,17 @@
 import { useRef, useEffect } from 'react'
 
-const COLORS = {
+const DARK = {
   available: { bg: 'rgba(108, 92, 231, 0.2)', border: '#6c5ce7', text: '#a29bfe', dim: '#6b5b9e' },
   learned:   { bg: 'rgba(0, 184, 148, 0.2)', border: '#00b894', text: '#55efc4', dim: '#2a8a7a' },
   folder:    { bg: 'rgba(253, 203, 110, 0.18)', border: '#fdcb6e', text: '#fdcb6e', dim: '#9a8a5e' },
   folderLearned: { bg: 'rgba(0, 184, 148, 0.25)', border: '#00b894', text: '#55efc4', dim: '#2a8a7a' }
+}
+
+const LIGHT = {
+  available: { bg: 'rgba(108, 92, 231, 0.07)', border: '#6c5ce7', text: '#5a4bd1', dim: '#8b7cf7' },
+  learned:   { bg: 'rgba(0, 163, 129, 0.07)', border: '#00a381', text: '#007a63', dim: '#00a381' },
+  folder:    { bg: 'rgba(214, 137, 16, 0.1)', border: '#d68910', text: '#b0780e', dim: '#d68910' },
+  folderLearned: { bg: 'rgba(0, 163, 129, 0.12)', border: '#00a381', text: '#007a63', dim: '#00a381' }
 }
 
 function truncate(str, maxLen) {
@@ -14,6 +21,7 @@ function truncate(str, maxLen) {
 
 export default function SkillTree({ nodes, edges, onNodeClick, learnedIds }) {
   const canvasRef = useRef(null)
+  const drawRef = useRef(null)
   const state = useRef({
     panX: 0, panY: 0,
     centerDone: false,
@@ -73,6 +81,7 @@ export default function SkillTree({ nodes, edges, onNodeClick, learnedIds }) {
     }
 
     // nodes
+    const COLORS = document.documentElement.getAttribute('data-theme') === 'light' ? LIGHT : DARK
     for (const n of nodes) {
       const learned = learnedIds.includes(n.id)
       let c
@@ -118,6 +127,8 @@ export default function SkillTree({ nodes, edges, onNodeClick, learnedIds }) {
     ctx.restore()
   }
 
+  drawRef.current = draw
+
   // resize + initial draw
   useEffect(() => {
     const cvs = canvasRef.current
@@ -142,6 +153,17 @@ export default function SkillTree({ nodes, edges, onNodeClick, learnedIds }) {
     cvs.height = parent.clientHeight
     draw()
   }, [nodes, edges, learnedIds])
+
+  // redraw when theme changes
+  useEffect(() => {
+    const observer = new MutationObserver(() => {
+      const cvs = canvasRef.current
+      if (!cvs) return
+      drawRef.current?.()
+    })
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] })
+    return () => observer.disconnect()
+  }, [])
 
   // mouse events
   useEffect(() => {
