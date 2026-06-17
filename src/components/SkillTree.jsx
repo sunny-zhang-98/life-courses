@@ -1,10 +1,15 @@
 import { useRef, useEffect } from 'react'
 
 const COLORS = {
-  available: { bg: 'rgba(108, 92, 231, 0.2)', border: '#6c5ce7', text: '#a29bfe' },
-  learned:   { bg: 'rgba(0, 184, 148, 0.2)', border: '#00b894', text: '#55efc4' },
-  folder:    { bg: 'rgba(253, 203, 110, 0.18)', border: '#fdcb6e', text: '#fdcb6e' },
-  folderLearned: { bg: 'rgba(0, 184, 148, 0.25)', border: '#00b894', text: '#55efc4' }
+  available: { bg: 'rgba(108, 92, 231, 0.2)', border: '#6c5ce7', text: '#a29bfe', dim: '#6b5b9e' },
+  learned:   { bg: 'rgba(0, 184, 148, 0.2)', border: '#00b894', text: '#55efc4', dim: '#2a8a7a' },
+  folder:    { bg: 'rgba(253, 203, 110, 0.18)', border: '#fdcb6e', text: '#fdcb6e', dim: '#9a8a5e' },
+  folderLearned: { bg: 'rgba(0, 184, 148, 0.25)', border: '#00b894', text: '#55efc4', dim: '#2a8a7a' }
+}
+
+function truncate(str, maxLen) {
+  if (!str || str.length <= maxLen) return str || ''
+  return str.slice(0, maxLen) + '…'
 }
 
 export default function SkillTree({ nodes, edges, onNodeClick, learnedIds }) {
@@ -87,22 +92,27 @@ export default function SkillTree({ nodes, edges, onNodeClick, learnedIds }) {
 
       // Title
       ctx.fillStyle = c.text
-      ctx.font = '13px -apple-system, "PingFang SC", sans-serif'
+      ctx.font = 'bold 13px -apple-system, "PingFang SC", sans-serif'
       ctx.textAlign = 'center'
       ctx.textBaseline = 'middle'
-      ctx.fillText(n.title, n.x + n.width / 2, n.y + n.height / 2)
+      ctx.fillText(n.title, n.x + n.width / 2, n.y + 22)
+
+      // Summary (truncated)
+      const summary = truncate(n.summary, 15)
+      ctx.fillStyle = c.dim
+      ctx.font = '10px -apple-system, "PingFang SC", sans-serif'
+      ctx.fillText(summary, n.x + n.width / 2, n.y + 48)
 
       if (learned) {
         ctx.fillStyle = '#00b894'
         ctx.font = 'bold 14px sans-serif'
-        ctx.fillText('✓', n.x + n.width - 18, n.y + n.height / 2)
+        ctx.fillText('✓', n.x + n.width - 20, n.y + 22)
       }
 
       // Folder indicator for nodes with children
       if (n.hasChildren) {
-        ctx.fillStyle = 'rgba(255,255,255,0.3)'
-        ctx.font = '12px sans-serif'
-        ctx.fillText('📂', n.x + 10, n.y + n.height / 2)
+        ctx.font = '11px sans-serif'
+        ctx.fillText('📂', n.x + 12, n.y + 22)
       }
     }
     ctx.restore()

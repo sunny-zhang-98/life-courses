@@ -52,5 +52,7 @@
     "learn-to-code",
     "exercise-basics"
   ],
-  "children": []
+  "children": [],
+  "whyLearn": "刻意练习的四个特征：1) 有明确的目标（不是『练好』而是『这次不错过这个音符』） 2) 专注（全神贯注，不能分心） 3) 反馈（即时知道对错） 4) 走出舒适区。",
+  "costOfIgnorance": "如果练习 = 重复做同样的事，指望结果不同。"
 }

@@ -2,7 +2,10 @@
   "id": "family-relationships",
   "title": "👨‍👩‍👧‍👦 家庭与情感",
   "summary": "人一生最重要的关系不是与工作的关系，而是与家人、伴侣、朋友的关系。这是幸福感的真正来源。",
-  "branchIds": ["relationships", "family"],
+  "branchIds": [
+    "relationships",
+    "family"
+  ],
   "resources": [],
   "commonMistakes": [
     "把亲密关系当成『顺其自然』的事情，不需要学习",
@@ -25,7 +28,15 @@
     "你有认真思考过自己想要什么样的亲密关系吗？",
     "如果你有孩子，你能说出孩子最近的三个困惑或喜悦吗？"
   ],
-  "related": ["health-wellness", "finance-wealth", "life-purpose"],
-  "children": ["intimate-relationships"],
-  "next": []
+  "related": [
+    "health-wellness",
+    "finance-wealth",
+    "life-purpose"
+  ],
+  "children": [
+    "intimate-relationships"
+  ],
+  "next": [],
+  "whyLearn": "人生的幸福感最大来源是关系——和伴侣、孩子、父母的关系。这些关系不会自动变好，需要用心经营。",
+  "costOfIgnorance": "不会经营亲密关系→孤独。不会当父母→孩子用一生治愈童年。不会面对父母衰老→子欲养而亲不待时追悔莫及。"
 }

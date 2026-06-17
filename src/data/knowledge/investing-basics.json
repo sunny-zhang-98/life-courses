@@ -2,7 +2,10 @@
   "id": "investing-basics",
   "title": "投资基础",
   "summary": "让钱为你工作——但前提是你知道自己在做什么。",
-  "branchIds": ["wealth-law", "investing"],
+  "branchIds": [
+    "wealth-law",
+    "investing"
+  ],
   "resources": [
     {
       "type": "book",
@@ -44,7 +47,12 @@
     "如果明天股市跌 30%，你会怎么做？（卖出/补仓/不动）",
     "你计算过自己的投资综合费率（管理费+托管费+申购费）是多少吗？"
   ],
-  "related": ["finance-basics", "economy-thinking"],
+  "related": [
+    "finance-basics",
+    "economy-thinking"
+  ],
   "children": [],
-  "next": []
+  "next": [],
+  "whyLearn": "通货膨胀是确定会发生的隐形税收。不懂投资，你的存款每年都在缩水。",
+  "costOfIgnorance": "不投资→被通胀割韭菜。乱投资→被市场割韭菜。最亏的不是没赚钱，是花了时间精力学了错误的方法。"
 }

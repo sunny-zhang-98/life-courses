@@ -55,5 +55,7 @@
   "next": [
     "feynman-method",
     "critical-thinking"
-  ]
+  ],
+  "whyLearn": "好的笔记系统 = 理解 + 提炼 + 连接 + 复习。推荐康奈尔笔记法（记录→简化→背诵→思考→复习）搭配卡片笔记法（原子化、互联）。",
+  "costOfIgnorance": "如果笔记等于抄书，没有自己的思考。"
 }

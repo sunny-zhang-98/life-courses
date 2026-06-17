@@ -2,7 +2,10 @@
   "id": "finance-wealth",
   "title": "💰 财务与理财",
   "summary": "钱不是目的，但管理不好钱就没有选择权——理财是成年人最基本的生存技能。",
-  "branchIds": ["wealth-law", "finance"],
+  "branchIds": [
+    "wealth-law",
+    "finance"
+  ],
   "resources": [],
   "commonMistakes": [
     "理财 = 投资，不投资就不用理财",
@@ -25,7 +28,18 @@
     "你买了什么保险？你知道它们保什么吗？",
     "你的投资你能用一句话说清楚『赚的是什么钱』吗？"
   ],
-  "related": ["work-career", "family-relationships", "society-citizenship"],
-  "children": ["finance-basics", "investing-basics"],
-  "next": ["finance-basics"]
+  "related": [
+    "work-career",
+    "family-relationships",
+    "society-citizenship"
+  ],
+  "children": [
+    "finance-basics",
+    "investing-basics"
+  ],
+  "next": [
+    "finance-basics"
+  ],
+  "whyLearn": "金钱不是目的，但不会管钱就失去了选择权。理财的核心不是赚钱，是在你需要的时候有钱可用。",
+  "costOfIgnorance": "月光→遇到机会抓不住。没有应急金→一次意外就能击穿生活。不懂投资→通货膨胀悄悄吃掉你的存款。"
 }

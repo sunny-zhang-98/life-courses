@@ -4,7 +4,7 @@
  */
 
 const NODE_W = 160
-const NODE_H = 54
+const NODE_H = 72
 const NODE_GAP = 40
 
 export function computeLayout(knowledgeList) {

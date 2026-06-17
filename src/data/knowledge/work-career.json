@@ -2,7 +2,9 @@
   "id": "work-career",
   "title": "💼 工作与事业",
   "summary": "从第一份工作到职业规划——把工作从谋生手段变成事业。",
-  "branchIds": ["career"],
+  "branchIds": [
+    "career"
+  ],
   "resources": [],
   "commonMistakes": [
     "把上学时的思维带到工作中——等着被安排任务",
@@ -25,7 +27,19 @@
     "你最近一个月学到了什么新的职业技能？",
     "你有明确的职业目标吗？今年要为这个目标做什么？"
   ],
-  "related": ["foundation-skills", "thinking-learning", "finance-wealth"],
-  "children": ["learn-to-code", "first-job", "career-planning"],
-  "next": ["learn-to-code"]
+  "related": [
+    "foundation-skills",
+    "thinking-learning",
+    "finance-wealth"
+  ],
+  "children": [
+    "learn-to-code",
+    "first-job",
+    "career-planning"
+  ],
+  "next": [
+    "learn-to-code"
+  ],
+  "whyLearn": "工作占据人生最长的时间段。选对方向、持续成长、建立职业壁垒——这决定了你的经济能力和成就感。",
+  "costOfIgnorance": "没有职业规划→在低价值岗位上消耗。不持续学习→被市场淘汰。把工作当苦役→每天都不快乐。"
 }

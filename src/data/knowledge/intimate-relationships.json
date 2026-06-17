@@ -2,7 +2,10 @@
   "id": "intimate-relationships",
   "title": "亲密关系",
   "summary": "爱不是感觉，是能力——建立和维系深度关系需要学习、练习和勇气。",
-  "branchIds": ["relationships", "intimate"],
+  "branchIds": [
+    "relationships",
+    "intimate"
+  ],
   "resources": [
     {
       "type": "book",
@@ -44,7 +47,13 @@
     "你知道伴侣最重要的『爱的语言』是什么吗？",
     "你觉得自己在关系中更多是『给予』还是『索取』？"
   ],
-  "related": ["communication", "emotion-management", "family-relationships"],
+  "related": [
+    "communication",
+    "emotion-management",
+    "family-relationships"
+  ],
   "children": [],
-  "next": []
+  "next": [],
+  "whyLearn": "爱不是感觉，是能力。好的亲密关系是人生幸福感最强的来源，但也是最多人失败的地方。",
+  "costOfIgnorance": "在错误的关系模式中反复受伤。把感觉不对当作分手的理由，而不去理解自己究竟需要什么。孤独终老可能不是最可怕的，可怕的是在关系中比一个人更孤独。"
 }

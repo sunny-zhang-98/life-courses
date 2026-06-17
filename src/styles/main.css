@@ -273,6 +273,38 @@ button {
   margin-bottom: 28px;
 }
 
+/* Why learn / Cost of ignorance callouts */
+.detail-why-section {
+  display: flex;
+  gap: 12px;
+  padding: 14px 18px;
+  margin-bottom: 14px;
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+  border-left: 3px solid var(--color-yellow);
+  align-items: flex-start;
+}
+
+.detail-why-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  line-height: 1.5;
+}
+
+.detail-why-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-text-dim);
+  letter-spacing: 0.3px;
+  margin-bottom: 3px;
+}
+
+.detail-why-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
 /* Two-column grid inside main area */
 .detail-grid {
   display: grid;

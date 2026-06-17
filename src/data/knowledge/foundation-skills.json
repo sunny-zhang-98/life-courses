@@ -2,7 +2,9 @@
   "id": "foundation-skills",
   "title": "📚 基础能力",
   "summary": "学习任何知识之前，先掌握这些底层能力——阅读、写作、沟通、时间管理。它们是所有学习的基石。",
-  "branchIds": ["general"],
+  "branchIds": [
+    "general"
+  ],
   "resources": [],
   "commonMistakes": [
     "觉得这些『太基础了没必要学』，直接去学『硬技能』",
@@ -25,7 +27,21 @@
     "你知道自己每天的时间主要花在哪里吗？",
     "你能在 3 分钟内说清楚一个复杂问题吗？"
   ],
-  "related": ["thinking-learning", "work-career"],
-  "children": ["reading", "note-taking", "writing-basics", "time-management", "communication", "xunxujianjin"],
-  "next": ["reading"]
+  "related": [
+    "thinking-learning",
+    "work-career"
+  ],
+  "children": [
+    "reading",
+    "note-taking",
+    "writing-basics",
+    "time-management",
+    "communication",
+    "xunxujianjin"
+  ],
+  "next": [
+    "reading"
+  ],
+  "whyLearn": "阅读、写作、沟通、时间管理——这些能力是所有学习的操作系统。它们不教你怎么赚钱，但决定了你学习任何其他技能的速度和深度。",
+  "costOfIgnorance": "表达能力差→想法再好也没人知道。时间管理差→每天被琐事推着走。不会阅读→信息爆炸中被噪音淹没。这些短板会持续放大，随着年龄增长越来越难补。"
 }

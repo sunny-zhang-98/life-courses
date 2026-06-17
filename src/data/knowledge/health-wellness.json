@@ -2,7 +2,10 @@
   "id": "health-wellness",
   "title": "💪 身心健康",
   "summary": "身体是革命的本钱——健康是一切的基础，也是最容易被忽视的长期投资。",
-  "branchIds": ["wellness", "health"],
+  "branchIds": [
+    "wellness",
+    "health"
+  ],
   "resources": [],
   "commonMistakes": [
     "年轻时透支身体，觉得健康是理所当然的",
@@ -25,7 +28,22 @@
     "你最近一次感到压力时，你是怎么处理的？",
     "你的饮食结构里蔬菜和蛋白质占比合理吗？"
   ],
-  "related": ["family-relationships", "work-career"],
-  "children": ["sleep-health", "exercise-basics", "running", "nutrition-basics", "emotion-management", "stress-management", "meditation"],
-  "next": ["sleep-health"]
+  "related": [
+    "family-relationships",
+    "work-career"
+  ],
+  "children": [
+    "sleep-health",
+    "exercise-basics",
+    "running",
+    "nutrition-basics",
+    "emotion-management",
+    "stress-management",
+    "meditation"
+  ],
+  "next": [
+    "sleep-health"
+  ],
+  "whyLearn": "所有人生追求的基础是你还在而且是精力充沛地在。健康习惯的复利效应是所有投资中最高的。",
+  "costOfIgnorance": "年轻时透支身体→中年开始还债。精力差→工作效率低、情绪容易崩、生活品质下降。最怕的不是生病，而是长期处于亚健康但还能撑的状态。"
 }

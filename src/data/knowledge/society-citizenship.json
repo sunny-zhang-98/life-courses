@@ -2,7 +2,9 @@
   "id": "society-citizenship",
   "title": "🌍 社会与公民",
   "summary": "理解社会如何运作、经济如何运行、法律如何保护你——做一个清醒的现代公民。",
-  "branchIds": ["social"],
+  "branchIds": [
+    "social"
+  ],
   "resources": [],
   "commonMistakes": [
     "觉得经济学离普通人太远，是国家的事",
@@ -25,7 +27,16 @@
     "你知道自己的社保和医保是怎么交的、能报销什么吗？",
     "你最近一次投票或参与公共讨论是关于什么话题？"
   ],
-  "related": ["finance-wealth", "thinking-learning"],
-  "children": ["economy-thinking"],
-  "next": ["economy-thinking"]
+  "related": [
+    "finance-wealth",
+    "thinking-learning"
+  ],
+  "children": [
+    "economy-thinking"
+  ],
+  "next": [
+    "economy-thinking"
+  ],
+  "whyLearn": "社会的运行规则不教但处处影响你——经济学、法律、社保。不了解这些，你会吃很多暗亏。",
+  "costOfIgnorance": "不懂法律→签合同被坑、权益受损不知道。不懂经济→财富被通胀稀释、做决策靠直觉。不关心社保→老了才发现保障不够。"
 }

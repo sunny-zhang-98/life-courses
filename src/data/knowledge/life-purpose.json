@@ -2,7 +2,9 @@
   "id": "life-purpose",
   "title": "🏛️ 人生与意义",
   "summary": "人为什么活着？什么值得追求？如何面对死亡？——这些不是哲学家的专利，是每个人迟早要面对的问题。",
-  "branchIds": ["life-purpose"],
+  "branchIds": [
+    "life-purpose"
+  ],
   "resources": [],
   "commonMistakes": [
     "觉得『想这些问题太早』——等到中年危机才被迫面对",
@@ -25,7 +27,13 @@
     "你清楚自己在生命最后阶段想要什么样的照护吗？",
     "你现在的生活方式，和你认为重要的事情是一致的吗？"
   ],
-  "related": ["family-relationships", "thinking-learning", "health-wellness"],
+  "related": [
+    "family-relationships",
+    "thinking-learning",
+    "health-wellness"
+  ],
   "children": [],
-  "next": []
+  "next": [],
+  "whyLearn": "按默认设置活到中年才开始问我到底想要什么——那时候改方向的成本已经很高。提前想清楚，每个选择都会更有方向。",
+  "costOfIgnorance": "花一辈子去追求别人定义的成功→到头来发现那不是自己想要的。逃避对衰老和死亡的思考→面对时毫无准备。"
 }
