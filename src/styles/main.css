@@ -224,10 +224,43 @@ button {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  overflow-y: auto;
-  padding: 36px 40px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   animation: fadeIn 0.2s ease;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.knowledge-detail {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.detail-top {
+  flex-shrink: 0;
+  padding: 28px 40px 0 40px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.detail-layout {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 40px 28px 40px;
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+/* Full-page detail view override - no fixed header */
+.detail-view .knowledge-detail {
+  height: auto;
+}
+.detail-view .detail-top {
+  border-bottom: none;
+}
+.detail-view .detail-layout {
+  overflow-y: visible;
 }
 
 @keyframes fadeIn {
@@ -257,12 +290,7 @@ button {
   background: var(--color-surface-hover);
 }
 
-/* Two-column layout: main + sidebar */
-.detail-layout {
-  display: flex;
-  gap: 32px;
-  align-items: flex-start;
-}
+/* Two-column layout: main + sidebar — see .detail-layout above */
 
 .detail-main {
   flex: 1;
@@ -482,10 +510,6 @@ button {
 /* ============================================
    Knowledge Card / Detail
    ============================================ */
-
-.knowledge-detail {
-  max-width: 100%;
-}
 
 .detail-header {
   margin-bottom: 32px;
